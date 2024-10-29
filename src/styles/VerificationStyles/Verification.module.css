@@ -51,6 +51,27 @@ color: var(--copy-text-color);
     text-align: center;
     color: var(--primary-color);
 }
+.verifyCode{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 1rem;
+}
+.code{
+    padding: 15px 20px;
+    background-color: var(--primary-text-color);
+    border-radius: 10px;
+
+}
+.code:hover{
+    padding: 15px 20px;
+    background-color: var(--secondary-color-color);
+    border-radius: 10px;
+    border: 2px solid var(--primary-color);
+}
+.code:hover img{
+    visibility: hidden;
+}
 @media  (max-width: 767px){
     .verification{
         max-height: auto;

@@ -13,7 +13,12 @@ function VerificationForm() {
         <p>We have sent you a verification code on your give email address and phone number  +92*********</p>
       </div>
       <div className={styles.verifyCode}>
+  
         <div className={styles.code}><img src={pin} alt="pin" /></div>
+        <div className={styles.code}><img src={pin} alt="pin" /></div>
+        <div className={styles.code}><img src={pin} alt="pin" /></div>
+        <div className={styles.code}><img src={pin} alt="pin" /></div>
+      
       </div>
       <p className={styles.resend}>Resend Code?</p>
       <p className={styles.chngCode}>Change Phone Number or Email Address</p>
