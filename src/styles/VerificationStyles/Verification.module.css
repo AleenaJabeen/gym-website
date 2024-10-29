@@ -41,6 +41,18 @@ color: var(--copy-text-color);
     font-size: 18px;
     color: var(--primary-text-color);
 }
+.btn{
+    background-color: var(--primary-color);
+    width: 100%;
+    color: black;
+    border-radius: 16px;
+    padding: 8px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+}
 .resend{
     font-size: 16px;
     align-self: flex-end;
@@ -51,27 +63,52 @@ color: var(--copy-text-color);
     text-align: center;
     color: var(--primary-color);
 }
-.verifyCode{
+.verifyCode {
     display: flex;
-    justify-content: space-evenly;
+    gap: 10px; /* Adds space between the boxes */
+  }
+  
+  .code {
+    position: relative;
+    display: flex;
     align-items: center;
-    gap: 1rem;
-}
-.code{
-    padding: 15px 20px;
-    background-color: var(--primary-text-color);
-    border-radius: 10px;
-
-}
-.code:hover{
-    padding: 15px 20px;
-    background-color: var(--secondary-color-color);
-    border-radius: 10px;
-    border: 2px solid var(--primary-color);
-}
-.code:hover img{
-    visibility: hidden;
-}
+    justify-content: center;
+    width: 50px; /* Width of each input box */
+    height: 50px; /* Height of each input box */ /* Default border color */
+    border-radius: 8px;
+    background-color:rgba(246, 246, 246, 0.4);
+     /* Default background color */
+  }
+  
+  .code input {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    background: transparent;
+    color: #444;
+  }
+  
+  .code input::placeholder {
+    color:var(--primary-color); /* Color of the placeholder symbol */
+    opacity: 1; /* Show the placeholder fully */
+  }
+  
+  .code input:focus {
+    background-color: black;
+    color:var(--primary-color); /* Text color in focused state */
+    border: 2px solid var(--primary-color); /* Border color in focused state */
+    outline: none;
+    border-radius: 8px;
+  }
+  
+  .code input:focus::placeholder {
+    color: transparent; /* Hide the placeholder on focus */
+  }
+  
 @media  (max-width: 767px){
     .verification{
         max-height: auto;

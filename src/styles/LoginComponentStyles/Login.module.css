@@ -98,6 +98,20 @@ input:focus{
     font-weight: 500;
     font-size: 16px;
 }
+.btn{
+    background-color: var(--primary-color);
+    width: 100%;
+    border-radius: 16px;
+    padding: 8px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    text-align: center;
+}
+.btn .Btn{
+    text-decoration: none;
+    color: black;
+}
 .checkbox{
     margin:10px 0;
     width: 100%;

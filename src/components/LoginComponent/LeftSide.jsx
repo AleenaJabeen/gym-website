@@ -6,8 +6,7 @@ import google from './images/google.png';
 import fb from './images/fb.png';
 import apple from './images/apple.png';
 import Footer from '../ReusableComponents/Footer';
-import Button from '../ReusableComponents/Button';
-
+import { Link } from 'react-router-dom';
 
 function LeftSide() {
   return (
@@ -30,7 +29,7 @@ function LeftSide() {
                     <input type="checkbox" />
                     <p>Remember me</p>
                 </div>
-                <Button title="Login"/>
+                <div className={styles.btn}><Link to={"/verification"} className={styles.Btn}>Login</Link></div>
                 <div className={styles.SignUp}>
                     <hr />
                     <p>Don’t have an account? <span>Sign Up</span></p>
