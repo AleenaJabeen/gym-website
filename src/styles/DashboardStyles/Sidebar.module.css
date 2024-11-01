@@ -2,81 +2,257 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
 }
 .sidebar{
-    width: 300px;
-    text-align: center;
-    padding:0;
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100vh;
+   max-width: 300px;
+   width: 21vw;
+   display: flex;
+   align-items: space-between;
+   background-color: var(--primary-color);
+   flex-direction: column;
+   transition: max-width 0.3s ease-in-out;
+   color: rgba(1, 1, 1, 1);
+   box-sizing: border-box;
+
 }
-.header{
+
+.collapsed .sidebar{
+    height: auto;
+    max-width: 5rem;
+    display: flex;
+    align-items: center;
+}
+
+.collapsed .hide{
+    position: absolute;
+    display: none;
+}
+/* search wrapper */
+.searchWrapper{
+    width: 246px;
+height: 44px;
+border-radius: 5px;
+margin: 1rem;
+    position: relative;
+    background-color: rgba(255, 255, 255, 0.6);
+    
+}
+.searchWrapper input{
+    background-color: transparent;
     width: 100%;
-    background-color: black;
-    padding: 1rem;
+height: 44px;
+border-radius: 5px;
+outline: none;
+border: none;
+flex-grow: 1;
+padding: 0 0.5rem;
+padding-left: 3rem;
 }
-.header h3{
-    font-family: "Poppins",sans-serif;
+.searchWrapper img{
+    position: absolute;
+    z-index:2;
+    left: 1.625rem;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    right: 1.5rem;
+}
+.collapsed .searchWrapper img{
+    
+top: 50%;
+left: 50%;
+right: auto;
+transform: translate(-50%,-50%);
+stroke: var(--primary-color);
+}
+.searchWrapper input::-webkit-input-placeholder{
+    color: var(--primary-color);
+    white-space: nowrap;
+
+}
+.collapsed .searchWrapper{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+   
+}
+.collapsed .searchWrapper input::-webkit-input-placeholder{
+    color: transparent;
+}
+/* sidebar top */
+.sidebarTopWrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(26, 29, 38, 1);
+
+}
+.sidebarTop{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    height: 100px;
+}
+.sidebarTop img{
+    display: none;
+}
+.collapsed  .sidebar img{
+    display: block;
+}
+.hide{
 font-size: 28px;
 font-weight: 600;
 color: var(--primary-color);
 }
-.inner{
-    width: 100%;
-    background-color: var(--primary-color);
+.collapsed .sidebarTop{
     display: flex;
-    justify-content:center;
-    align-items: center;
     flex-direction: column;
-    padding: .75rem;
+    justify-content: center;
+}
+/* sidebarLinks */
+.sidebarLinks{
+    overflow-y: scroll;
+    scrollbar-width: thin; /* Options: auto, thin, none */
+    scrollbar-color:rgba(26, 29, 38, 1) transparent ;
+    width: 100%;
+font-size: 16px;
+font-weight: 500;
+padding: 1rem;
 
 }
-.searchbar{
-    width: 250px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px;
-    gap: .25rem;
-    color: black;
-    border-radius: 5px;
-    background-color: var(--primary-text-color);
+/* Customize scrollbar width */
+::-webkit-scrollbar {
+    width: 10px; 
+    height: 10px; 
 }
-.searchbar input[type="text"]{
-    width: 100%;
-    border: none;
-    font-size: 14px;
-    background-color: transparent;
-}
-.menu{
-    width: 100%;
-}
-.menu li{
-    max-width: 300px;
-    display: flex;
-    list-style: none;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-    padding: 1rem;
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 500;
-}
-.menu li:hover{
-    background: rgba(1, 1, 1, 0.2);
-}
-.liveBtn{
-    max-width: 168px;
-    font-family: "Poppins",sans-serif;
-    margin: 1rem 0;
-    font-weight: 500;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    gap: 1rem;
-    padding: 10px 25px;
-    background-color: var(--secondary-color);
-    border: none;
-    color: var(--primary-color);
-    font-size: 20px;
+
+
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(26, 29, 38, 1);
+ /* Handle color */
     border-radius: 10px;
+    border: 3px solid black; /* Border to create spacing effect */
 }
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555; /* Darker on hover */
+}
+
+.sidebarLinks ul{
+    list-style-type: none;
+    position: relative;
+    display: flex;
+    column-gap: 0.5rem;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+
+}
+.collapsed .sidebarLinks li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.collapsed .sidebarLinks{
+    overflow-y: hidden;
+}
+
+.sidebarLinks li img{
+width: 16px;
+height: 16px;
+
+}
+.sidebarLinks li:hover{
+    border-radius: 10px;
+    background-color:  rgba(1, 1, 1, 0.2);
+    
+}
+.sidebarLinks li{
+    padding: 0 1rem;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    height: 44px;
+    transition: background 0.2s ease-in-out;
+
+}
+.sidebarLinks  li .link{
+
+font-size: 16px;
+font-weight: 500;
+    flex-grow: 1;
+    overflow: hidden;
+    white-space: nowrap;
+    color: rgba(1, 1, 1, 1);
+    animation: fadeIn 0.2s ease-in-out;
+}
+.sidebarLinks .active:hover{
+    background-color:rgba(1, 1, 1, 0.2) ;
+}
+.bottomLinks{
+    display: flex;
+align-items: center;
+justify-content:center;
+overflow-y: hidden;
+}
+.bottomLinks li{
+    width: 168px;
+height: 50px;
+color: var(--primary-color);
+border-radius: 10px;
+}
+.bottomLinks li .link{
+font-size: 20px;
+font-weight: 500;
+color: var(--primary-color);
+}
+.bottomLinks li {
+    background: rgba(26, 29, 38, 1);
+
+}
+.bottomLinks li:hover{
+    background: rgba(26, 29, 38, 1);
+
+}
+.collapsed .bottomLinks li{
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+}
+
+.gymProfile{
+    display: flex;
+align-items: center;
+justify-content:center;
+flex-direction: column;
+}
+.collapsed .gymProfile {
+display: none;
+}
+
+@keyframes fadeIn {
+    from {
+        width: 0;
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+        width: 100%;
+    }
+    
+}
+
+

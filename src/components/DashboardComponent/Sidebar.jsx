@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useEffect,useState} from "react";
 import Footer from "../ReusableComponents/Footer";
 import styles from "../../styles/DashboardStyles/Sidebar.module.css";
 import DashboardIcon from './images/Dashboard.png';
@@ -8,6 +8,7 @@ import VideoIcon from './images/VideoIcon.png';
 import logo from './images/logo.png';
 import play from './images/play.png';
 import search from './images/search.png';
+import img from './images/img.png'
 
 const items = ["Dashboard", "Users", "Subscriptions", "Video"];
 
@@ -20,30 +21,60 @@ const itemIcons = {
 };
 
 function Sidebar() {
+  const [isCollapsed, setIsCollapsed] = useState(window.innerWidth < 900);
+  // Effect to handle resize and update isCollapsed state
+  useEffect(() => {
+    const handleResize = () => setIsCollapsed(window.innerWidth < 900);
+    window.addEventListener("resize", handleResize);
+    
+    // Cleanup listener on component unmount
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
   return (
     <>
-      <aside className={styles.sidebar}>
-      <div className={styles.header}>
-            <h3>ANDREWS</h3>
-          </div>
-        <div className={styles.inner}>
-        <div className={styles.searchbar}>
-            <img src={search} alt="searchicon" />
-            <div><input type="text" placeholder="Search Menu..." /></div>
-          </div>
-          <nav className={styles.menu}> 
+    <div className={isCollapsed ? styles.collapsed : ''}>
+    <nav className={styles.sidebar}>
+      <div className={styles.sidebarTopWrapper}>
+        <div className={styles.sidebarTop}>
+          <img src={img} alt="profile" />
+          <span className={styles.hide}>ANDREW'S</span>
+        </div>
+      </div>
+      <div className={styles.searchWrapper}>
+        <img src={search} alt="search icon"/>
+        <input type="text" placeholder="Search Menu..." />
+      </div>
+     
+       
+<div className={styles.sidebarHash}>
+      <div className={styles.sidebarLinks}>
+          <ul> 
             {items.map((item, index) => (
               <li key={index} className={styles.menuItem}>
                 <img src={itemIcons[item]} alt={item} className={styles.icon} />
-                <p>{item}</p>
+                <span className={`${styles.link} ${styles.hide}`}>{item}</span>
               </li>
             ))}
+            </ul>
+          </div> 
+<div className={`${styles.bottomLinks} ${styles.sidebarLinks}`}>
+  <ul>
+    <li>
+        <img src={play} alt="play icon" />
+        <p className={`${styles.link} ${styles.hide}`}>Go Live</p>
+    </li>
+  </ul>
+</div>
+<div className={styles.gymProfile}>
+  <img src={logo} alt="logo" />
+  <Footer/>
+</div>
+</div>
           </nav>
-            <button className={styles.liveBtn}><img src={play} alt="Play" />Go Live</button>
-          <img src={logo} alt="" />
-          <Footer/>
-        </div>
-      </aside>
+          </div>
+          
+
+            
     </>
   );
 }

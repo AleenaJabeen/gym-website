@@ -1,0 +1,95 @@
+
+.user{
+width: 316px;
+height: 264px;
+border-radius: 10px;
+background: rgba(66, 71, 86, 1);
+border:1px solid rgba(118, 126, 151, 1);
+box-sizing: border-box;
+padding: 2rem 1rem;
+font-family: "Poppins",sans-serif;
+}
+.userInfo{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+    flex-direction: column;
+}
+.profileInfo{
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.profileInfo img{
+    width: 85px;
+height: 85px;
+
+}
+.userStatus{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--primary-color);
+    width: 103px;
+height: 33.1px;
+border-radius: 100px;
+border: 1px solid var(--primary-color);
+text-align: center;
+
+}
+.userAnalytics p{
+    color: rgba(248, 248, 248, 1);
+
+font-size: 14px;
+font-weight: 400;
+text-align: left;
+
+}
+.user p{
+    padding-top: .25rem;
+font-size: 12px;
+font-weight: 400;
+text-align: left;
+color: rgba(248, 248, 248, 1);
+
+}
+.user h3{
+    color: var(--primary-color);
+font-size: 20px;
+font-weight: 600;
+
+}
+hr{
+    width: 100%;
+    color:rgba(221, 221, 221, 0.4)
+}
+.userNameInfo{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.nametext h3{
+font-size: 16px;
+font-weight: 600;
+text-align: center;
+color: rgba(255, 255, 255, 1);
+
+}
+.nametext p{
+font-size: 12px;
+font-weight: 500;
+text-align: left;
+color: rgba(248, 248, 248, 1);
+
+
+}
+.gymPlan{
+    color: rgba(252, 206, 110, 1);
+    font-size: 22px;
+    font-weight: 600;
+    text-align: center;
+}

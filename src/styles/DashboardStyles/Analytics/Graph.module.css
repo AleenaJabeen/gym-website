@@ -1,0 +1,161 @@
+.graph{
+    width: 530px;
+height: 270px;
+font-family: "Poppins",sans-serif;
+border-radius: 10px;
+border:1px solid rgba(118, 126, 151, 1);
+background: rgba(66, 71, 86, 1);
+padding: 1rem 1rem;
+display: flex;
+align-items: space-between;
+justify-content: flex-end;
+flex-direction: column;
+
+
+}
+.graph p{
+font-size: 13px;
+font-weight: 500;
+text-align: left;
+color:rgba(248, 248, 248, 1);
+
+}
+.graph h3{
+font-size: 26px;
+font-weight: 500;
+color:rgba(255, 255, 255, 1) ;
+}
+.graphBars{
+   display: flex; 
+   justify-content: space-around;
+   align-items: flex-end;
+}
+.bar{
+    color: rgba(248, 248, 248, 1);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+gap: .5rem;
+font-size: 10px;
+font-weight: 400;
+
+}
+.unique{
+    display: flex;
+justify-content: center;
+align-items: center;
+    width: 51px;
+height: 18.94px;
+border-radius: 72.86px;
+background: rgba(208, 253, 62, 1);
+border:1px solid rgba(0, 0, 0, 0.15);
+font-size: 7.29px;
+font-weight: 500;
+text-align: center;
+
+
+}
+.circle{
+    width: 4px;
+height: 4px;
+border: 1px solid rgba(208, 253, 62, 1);
+background-color: transparent;
+border-radius: 50%;
+
+}
+.bar {
+    display: block;}
+.bar1{
+width: 30px;
+height: 49px;
+border-radius: 7px;
+background: rgba(254, 219, 138, 1);
+}
+.bar2{
+    width: 30px;
+height: 116px;
+border-radius: 7px;
+background: rgba(254, 219, 138, 1);
+
+
+}
+.bar3{
+    width: 30px;
+height: 80px;
+border-radius: 7px;
+background: rgba(254, 219, 138, 1);
+
+
+}
+.bar4{
+    width: 30px;
+height: 102px;
+border-radius: 7px;
+background: rgba(254, 219, 138, 1);
+
+
+}
+.bar5{
+    width: 30px;
+height: 116px;
+border-radius: 7px;
+background: rgba(254, 219, 138, 1);
+
+
+}
+.bar6{
+    width: 30px;
+height: 49px;
+border-radius: 7px;
+background: rgba(254, 219, 138, 1);
+
+}
+.bar7{
+    width: 30px;
+height: 64px;
+border-radius: 7px;
+background: rgba(254, 219, 138, 1);
+
+}
+.bar8{
+    display:none;
+    width: 30px;
+    height: 119.62px;
+    border-radius: 7px;
+background: rgba(208, 253, 62, 1);
+    
+    
+}
+.bar9{
+    width: 30px;
+    height: 102px;
+    border-radius: 7px;
+background: rgba(254, 219, 138, 1);
+   
+}
+.bar10{
+    width: 30px;
+    height: 83px;
+    border-radius: 7px;
+background: rgba(254, 219, 138, 1);
+   
+    
+}
+.bar11{
+    width: 30px;
+    height: 72px;
+    border-radius: 7px;
+background: rgba(254, 219, 138, 1);
+    
+    
+}
+@media (max-width: 768px){
+    .graph{
+        width: 70vw;
+        margin: 0 auto;
+    }
+   .hide,.bar6,.bar7,.bar7,.bar8,.bar9,.bar10,.bar11 ,span{
+display: none;
+    }
+}
