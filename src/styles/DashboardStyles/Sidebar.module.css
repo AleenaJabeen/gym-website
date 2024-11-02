@@ -15,9 +15,9 @@
 }
 
 .collapsed .sidebar {
- min-height: auto;
   max-width: 5rem;
   display: flex;
+  position: fixed;
   align-items: center;
 }
 
