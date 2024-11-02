@@ -25,15 +25,16 @@
   height: 150px;
   object-fit: cover;
 }
-.text {
-  text-align: center;
-}
+
 .text h2 {
   font-size: 36px;
   font-weight: 600;
+  text-align: center;
   color: var(--copy-text-color);
+  padding: 1rem 0;
 }
 .text p {
+    text-align: center;
   font-weight: 400;
   font-size: 18px;
   color: var(--primary-text-color);
