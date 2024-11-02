@@ -15,7 +15,7 @@ function Topbar() {
             <img src={search} alt="search icon" />
             <input type="text" placeholder='Search here...'/>
         </div>
-        {/* <div className={styles.notification}>
+        <div className={styles.notification}>
             <img src={notifi} alt="notification icon" />
         </div>
         <div className={styles.cart}>
@@ -34,7 +34,7 @@ function Topbar() {
                 <h3>Jhon Doe</h3>
                 <p>admin@admin.com</p>
             </div>
-        </div> */}
+        </div>
     </section>
       
     </>

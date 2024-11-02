@@ -2,8 +2,10 @@
 .dashboard{
     display: flex;
    background: rgba(26, 29, 38, 1);
-   overflow: -moz-hidden-unscrollable;
+   justify-content: center;
+   align-items: center;
    overflow: hidden;
+   width: 98vw;
 }
 .wrapper{
     display: flex;
