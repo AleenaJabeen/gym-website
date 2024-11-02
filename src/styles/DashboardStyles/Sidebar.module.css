@@ -7,7 +7,7 @@
   width: 21vw;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   background-color: var(--primary-color);
   flex-direction: column;
   transition: max-width 0.3s ease-in-out;
@@ -19,6 +19,7 @@
   display: flex;
   position: fixed;
   align-items: center;
+  justify-content: center;
 }
 
 .collapsed .hide {
@@ -81,6 +82,7 @@
   background: rgba(26, 29, 38, 1);
 }
 .sidebarTop {
+    padding-top: 2rem;
   position: relative;
   display: flex;
   align-items: center;
