@@ -7,7 +7,7 @@
   width: 21vw;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   background-color: var(--primary-color);
   flex-direction: column;
   transition: max-width 0.3s ease-in-out;
@@ -15,11 +15,12 @@
 }
 
 .collapsed .sidebar {
+    height: 100vh;
   max-width: 5rem;
   display: flex;
   position: fixed;
-  align-items: center;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .collapsed .hide {
