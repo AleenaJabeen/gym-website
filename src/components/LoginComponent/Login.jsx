@@ -7,10 +7,8 @@ import image from "./images/image.png";
 function Login() {
   return (
     <div className={styles.login}>
-      <div className={styles.wrapper}>
-        <LeftSide />
-        <RightSide img={image} />
-      </div>
+    <LeftSide/>
+      <RightSide img={image}/>
     </div>
   );
 }

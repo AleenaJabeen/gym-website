@@ -1,6 +1,5 @@
 .user {
-  max-width: 316px;
-  height: 264px;
+  max-width: 358px;
   border-radius: 10px;
   background: rgba(66, 71, 86, 1);
   border: 1px solid rgba(118, 126, 151, 1);
@@ -18,6 +17,7 @@
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  gap: 1rem;
 }
 .profileInfo img {
   width: 85px;
@@ -63,6 +63,7 @@ hr {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
 }
 .nametext h3 {
   font-size: 16px;

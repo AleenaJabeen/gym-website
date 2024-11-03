@@ -85,7 +85,6 @@ text-align: center;
     padding: 1rem;
     align-items: flex-start;
    gap: 1rem;
-   height: 200px;
   }
 
   .listedWorkout{
@@ -95,7 +94,7 @@ text-align: center;
     gap: .75rem;
   }
   .listedWorkout > div {
-    flex: 1 1 calc(20% - 10px); /* 50% width minus the gap */
+    flex: 1 1 calc(30% - 10px); /* 50% width minus the gap */
     text-align: center;
 
   }

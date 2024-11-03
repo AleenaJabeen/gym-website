@@ -4,17 +4,13 @@ import quote from "./images/quote.png";
 
 function RightSide({ img }) {
   return (
-    <div
-      className={styles.rightSide}
-      style={{ backgroundImage: `url(${img})` }}
-    >
-      <div className={styles.quoteBlock}>
+    
+    <div className={styles.rightSide}>
+    <img src={img} alt="Image of Man exercising" />
+    <div className={styles.quoteBlock}>
         <img src={quote} alt="Quotation Mark" />
-        <p>
-          Find reliable and highly rated babysitters that fit your schedule
-          effortlessly.
-        </p>
-      </div>
+        <p>Find reliable and highly rated babysitters that fit your schedule effortlessly. </p>
+    </div>
     </div>
   );
 }
