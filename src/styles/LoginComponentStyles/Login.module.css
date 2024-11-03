@@ -13,21 +13,24 @@
   padding: 0;
   margin: 0;
   font-family: "Poppins",sans-serif;
+  overflow-x: hidden;
 }
 .login{
+  width: 100vw;
   background-color: var(--secondary-color);
   display: flex;
-  justify-content: center;
+ justify-content: center;
   align-items: flex-start;
+  overflow: hidden;
 }
 .leftSide{
-  max-width: 100%;
-  width: 37.25vw;
+  width: 40vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
-  padding:1rem  2.6rem;
+  padding:1rem 5rem;
+  
 }
 .leftSide p{
  width: 100%;
@@ -106,12 +109,12 @@ color: var(--tertiary-text-color);
  width: 100%;
  background-color: var(--primary-color);
  border:none;
-min-height: 60px;
+ padding: 8px 0;
+max-height: 65px;
 text-decoration: none;
 border-radius: 16px;
 font-size: 20px;
 font-weight: 600;
-line-height: 30px;
 color:  rgba(1, 1, 1, 1);
 }
 input[type="text"], input[type="password"], input[type="email"]:focus{
@@ -155,6 +158,7 @@ height: 0px;
   align-items: center;
   width:100%;
   gap: 1rem;
+  padding-bottom:1rem ;
 }
 .icons{
   display: flex;
@@ -169,10 +173,14 @@ border-radius: 5px;
 
 
 }
+.rightSide{
+  width: 60vw;
+}
 .rightSide img{
-float: right;
+width: 60vw;
 object-fit: cover;
 position: relative;
+overflow: hidden;
 }
 .quoteBlock {
   display: flex;
@@ -208,7 +216,6 @@ color: var(--copy-text-color);
 flex-direction: column-reverse;
 width: 100vw;
 
-
   }
   .leftSide{
       width: 100vw;
@@ -216,7 +223,7 @@ width: 100vw;
 
   }
   .loginForm{
-      max-width: 100%;
+      width: 100%;
   }
   .rightSide img{
      width: 100vw;

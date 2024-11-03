@@ -7,10 +7,10 @@ import VerificationForm from "./VerificationForm";
 function Verfication() {
   return (
     <div className={styles.verification}>
-      <div className={styles.wrapper}>
+     
         <VerificationForm />
         <RightSide img={image} />
-      </div>
+   
     </div>
   );
 }
