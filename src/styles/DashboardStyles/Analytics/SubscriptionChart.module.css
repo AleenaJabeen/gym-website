@@ -1,5 +1,5 @@
 .chartContainer {
-  width: 40vw;
+  width: 31vw;
   height: 270px;
   background: rgba(66, 71, 86, 1);
   border-radius: 10px;
@@ -22,8 +22,10 @@ h2 {
 }
 .circle {
   position: relative;
-  width: 171px;
-  height: 171px;
+  min-width: 171px;
+  min-height: 171px;
+  width: 161px;
+  height: 161px;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -107,7 +109,7 @@ h2 {
   margin-right: 10px;
   background-color: rgba(117, 179, 254, 1);
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .chartContainer {
     margin: 0 auto;
     height: auto;

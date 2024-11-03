@@ -6,6 +6,7 @@
   gap: 1rem;
   color: white;
   width: 71vw;
+  overflow-x: hidden;
 }
 .welcome {
   display: flex;

@@ -3,7 +3,6 @@
   top: 0;
   left: 0;
   height: 100vh;
-  max-width: 300px;
   width: 21vw;
   display: flex;
   align-items: center;
@@ -12,6 +11,7 @@
   flex-direction: column;
   transition: max-width 0.3s ease-in-out;
   color: rgba(1, 1, 1, 1);
+  overflow: hidden;
 }
 
 .collapsed .sidebar {
@@ -29,11 +29,12 @@
 }
 /* search wrapper */
 .searchWrapper {
-  width: 246px;
+  max-width: 246px;
   height: 44px;
   border-radius: 5px;
   margin: 1rem;
   position: relative;
+  color: rgba(1, 1, 1, 1);
   background-color: rgba(255, 255, 255, 0.6);
 }
 .searchWrapper input {
@@ -62,9 +63,12 @@
   right: auto;
   transform: translate(-50%, -50%);
 }
-.searchWrapper input::-webkit-input-placeholder {
-  color: var(--primary-color);
+.searchWrapper input::placeholder {
+  color:  rgba(1, 1, 1, 1);
   white-space: nowrap;
+}
+.searchWrapper input[type="text"] {
+  color: rgba(1, 1, 1, 1);
 }
 .collapsed .searchWrapper {
   width: 3rem;
@@ -81,10 +85,9 @@
   justify-content: center;
   align-items: center;
   background: rgba(26, 29, 38, 1);
+  height: 100px;
 }
 .sidebarTop {
-    padding-top: 2rem;
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -103,7 +106,7 @@
   color: var(--primary-color);
 }
 .collapsed .sidebarTop {
-    padding-top: 0;
+    padding-top:0;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -126,14 +129,12 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: rgba(26, 29, 38, 1);
-  /* Handle color */
   border-radius: 10px;
-  border: 3px solid black; /* Border to create spacing effect */
+  border: 3px solid black; 
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background-color: #555; /* Darker on hover */
+  background-color: #555; 
 }
 
 .sidebarLinks ul {
@@ -183,6 +184,10 @@
   background-color: rgba(1, 1, 1, 0.2);
   border-radius: 10px;
 }
+.collapsed .active {
+  background-color: rgba(1, 1, 1, 0.2);
+  border-radius: 10px;
+}
 .bottomLinks {
   display: flex;
   align-items: center;
@@ -216,6 +221,7 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+
 }
 .collapsed .gymProfile {
   display: none;

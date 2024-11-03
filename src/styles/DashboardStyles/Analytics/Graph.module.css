@@ -1,5 +1,5 @@
 .graph {
-  width: 65vw;
+  width: 45vw;
   height: 270px;
   border-radius: 10px;
   border: 1px solid rgba(118, 126, 151, 1);
@@ -123,16 +123,20 @@
   border-radius: 7px;
   background: rgba(254, 219, 138, 1);
 }
-@media (max-width: 768px) {
+@media (max-width: 900px) {
+  .graph{
+    width: 100%;
+  }
 
   .hide,
-  .bar6,
-  .bar7,
   .bar8,
   .bar9,
   .bar10,
   .bar11,
   .bar span {
     display: none;
+  }
+  .graphBars{
+    gap: 1.65rem;
   }
 }

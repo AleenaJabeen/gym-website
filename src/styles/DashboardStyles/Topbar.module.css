@@ -5,6 +5,7 @@
   height: 100px;
   box-sizing: border-box;
   width: 100%;
+  overflow-x: hidden;
 }
 .search {
   max-width: 406px;
@@ -72,9 +73,10 @@
 
   color: rgba(248, 248, 248, 0.6);
 }
-@media  (max-width:767px) {
+@media  (max-width:900px) {
 
     .topbar{
+      padding: 1rem;
         flex-direction: column;
         gap: 1rem;
         height: auto;

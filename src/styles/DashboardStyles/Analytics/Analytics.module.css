@@ -1,12 +1,14 @@
 .analytics {
-  padding: 1rem;
+  padding: 0 1rem;
+  padding-bottom: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
   gap: 1rem;
-  margin-left: 64px;
+  margin-left:5rem;
   max-width: 1200px;
+  overflow-x: hidden;
 }
 .analyticsTop,
 .analyticsMiddle,
@@ -26,11 +28,12 @@
     justify-content: space-between;
     align-items: center;
     width: 100%;
+    overflow-x: hidden;
   }
 
   .analytics {
-    margin-left: 260px;
-    width: 71vw;
+    margin-left:21vw;
+    width: 77vw;
     justify-content: center;
     align-items: center;
   }

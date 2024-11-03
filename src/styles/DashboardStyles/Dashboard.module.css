@@ -5,7 +5,7 @@
    justify-content: center;
    align-items: center;
    overflow: hidden;
-   width: 98vw;
+   width: 100vw;
 }
 .wrapper{
     display: flex;

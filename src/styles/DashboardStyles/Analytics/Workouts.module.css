@@ -35,8 +35,6 @@
 /* RatedWorkout component styling */
 .ratedWorkout{
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 height: auto;
 border-radius: 10px 10px 0 0;
@@ -44,11 +42,11 @@ box-sizing: border-box;
 background-color:rgba(66, 71, 86, 1);
 color:rgba(255, 255, 255, 1);
 padding:.5rem ;
-width: 71vw;
+width: 100%;
 }
 .header{
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   gap:1rem;
  padding: 1rem;
@@ -62,9 +60,10 @@ background: rgba(244, 67, 54, 1);
 
 }
 .header h2{
+ 
 font-size: 20px;
 font-weight: 500;
-text-align: center;
+
 }
 .listedWorkout{
   display: flex;
@@ -81,15 +80,15 @@ text-align: center;
 }
 @media (min-width:900px){
   .ratedWorkout{
-  
+  width: 75vw;
     padding: 1rem;
-    align-items: flex-start;
+    align-items: space-between;
    gap: 1rem;
   }
 
   .listedWorkout{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     gap: .75rem;
   }
@@ -97,5 +96,8 @@ text-align: center;
     flex: 1 1 calc(30% - 10px); /* 50% width minus the gap */
     text-align: center;
 
+  }
+  .header{
+    justify-content: flex-start;
   }
 }
