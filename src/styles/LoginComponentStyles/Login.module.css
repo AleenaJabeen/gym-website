@@ -14,14 +14,14 @@
   margin: 0;
   font-family: "Poppins",sans-serif;
   overflow-x: hidden;
+ 
 }
 .login{
   width: 100vw;
   background-color: var(--secondary-color);
   display: flex;
  justify-content: center;
-  align-items: flex-start;
-  overflow: hidden;
+  align-items: start;
 }
 .leftSide{
   width: 40vw;
@@ -212,6 +212,9 @@ color: var(--copy-text-color);
   float: left;
 }
 @media (max-width:1024px){
+  *{
+    overflow-x: visible;
+  }
   .login{
 flex-direction: column-reverse;
 width: 100vw;
@@ -219,7 +222,7 @@ width: 100vw;
   }
   .leftSide{
       width: 100vw;
-      padding: 1rem 3rem;
+      padding: 1rem 3.5rem;
 
   }
   .loginForm{
