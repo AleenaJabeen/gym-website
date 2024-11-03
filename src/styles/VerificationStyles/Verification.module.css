@@ -52,6 +52,8 @@
   align-items: center;
   padding: 8px;
   max-height: 65px;
+  margin-bottom: 5rem;
+ 
 }
 .resend {
   font-size: 16px;
@@ -71,7 +73,6 @@
 }
 
 .code {
-  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -93,6 +94,13 @@
   color: #444;
 }
 
+.code input::placeholder {
+  color: var(--primary-color);
+  opacity: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
 .code input::placeholder {
   color: var(--primary-color);
   opacity: 1;

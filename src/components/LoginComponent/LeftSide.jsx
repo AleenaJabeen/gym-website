@@ -43,7 +43,7 @@ function LeftSide() {
         <img src={apple} alt="Apple logo" />
     </div>
   </div>
-  <div>
+  <div className={styles.loginFooter}>
     <Footer/>
   </div>
     </div>
